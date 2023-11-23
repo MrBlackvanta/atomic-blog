@@ -1,10 +1,7 @@
-import { Post } from "../App";
+import { usePostContext } from "../hooks/usePostContext";
 
-type ListProps = {
-  posts: Post[]; // Assuming Post is defined globally or imported
-};
-
-export default function List({ posts }: ListProps) {
+export default function List() {
+  const { posts } = usePostContext();
   return (
     <ul>
       {posts.map((post, i) => (

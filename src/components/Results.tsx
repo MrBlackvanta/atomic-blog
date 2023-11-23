@@ -1,9 +1,7 @@
-import { Post } from "../App";
+import { usePostContext } from "../hooks/usePostContext";
 
-type ResultsProps = {
-  posts: Post[];
-};
+export default function Results() {
+  const { posts } = usePostContext();
 
-export default function Results({ posts }: ResultsProps) {
   return <p>🚀 {posts.length} atomic posts found</p>;
 }
